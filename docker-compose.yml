@@ -1,2 +1,13 @@
 version: '3.1'
-  
+services: 
+  jdk:
+    image: java:8
+    command: tail -F anything
+    volumes:
+      - java:/usr/lib/jvm/java-8-openjdk-amd64
+volumes: 
+  java:
+    driver_opts:
+        type: none
+        device: /home/tiago/Documentos/exitos/reuniões/POC03/java
+        o: bind
